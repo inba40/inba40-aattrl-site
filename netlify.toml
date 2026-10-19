@@ -1,0 +1,31 @@
+# Netlify configuration for www.aattrl.com (AATTRL Global Expert Advisory).
+# Static site: no build step. Publish the repository root.
+
+[build]
+  publish = "."
+  command = ""
+
+# --- Future: Zoho-style product path -----------------------------------------
+# To serve AATTRL One at aattrl.com/one instead of one.aattrl.com, uncomment the
+# proxy below AFTER the AATTRL One app has been rebuilt with basePath "/one".
+# Doing it in the other order shows a broken page. See the aattrl-one-site repo,
+# docs/DEPLOYMENT.md, "Path migration".
+#
+# [[redirects]]
+#   from = "/one/*"
+#   to = "https://one.aattrl.com/one/:splat"
+#   status = 200
+#   force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

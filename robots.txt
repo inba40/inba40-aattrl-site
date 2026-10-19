@@ -1,0 +1,9 @@
+# robots.txt for https://www.aattrl.com/
+# All public pages, CSS and JavaScript may be crawled.
+# Draft, legal-template and thank-you pages carry a noindex tag instead of being blocked here,
+# so that search engines can read that tag.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.aattrl.com/sitemap.xml
