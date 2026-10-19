@@ -6,14 +6,14 @@
   command = ""
 
 # --- Future: Zoho-style product path -----------------------------------------
-# To serve AATTRL One at aattrl.com/one instead of one.aattrl.com, uncomment the
-# proxy below AFTER the AATTRL One app has been rebuilt with basePath "/one".
-# Doing it in the other order shows a broken page. See the aattrl-one-site repo,
+# To serve Enaivu at aattrl.com/one instead of enaivu.com, uncomment the
+# proxy below AFTER the Enaivu app has been rebuilt with basePath "/one".
+# Doing it in the other order shows a broken page. See the enaivu-site repo,
 # docs/DEPLOYMENT.md, "Path migration".
 #
 # [[redirects]]
 #   from = "/one/*"
-#   to = "https://one.aattrl.com/one/:splat"
+#   to = "https://enaivu.com/one/:splat"
 #   status = 200
 #   force = true
 
