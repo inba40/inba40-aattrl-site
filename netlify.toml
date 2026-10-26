@@ -1,5 +1,6 @@
-# Netlify configuration for www.aattrl.com (AATTRL Global Expert Advisory).
-# Static site: no build step. Publish the repository root.
+# Netlify configuration for www.aattrl.com (AATTRL, executive problem-solving).
+# Static site: no build step. Publish the repository root. Pages are generated
+# from _build/content.py by `python3 _build/build.py` and committed.
 
 [build]
   publish = "."
@@ -16,6 +17,77 @@
 #   to = "https://enaivu.com/one/:splat"
 #   status = 200
 #   force = true
+
+# --- Redirects from the previous (engineering advisory) site -------------------
+[[redirects]]
+  from = "/services/*"
+  to = "/engagements/"
+  status = 301
+
+[[redirects]]
+  from = "/industries/*"
+  to = "/who-we-serve/"
+  status = 301
+
+[[redirects]]
+  from = "/experts/*"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/training/"
+  to = "/engagements/"
+  status = 301
+
+[[redirects]]
+  from = "/request-expert/"
+  to = "/bring-a-challenge/"
+  status = 301
+
+[[redirects]]
+  from = "/request-proposal/"
+  to = "/bring-a-challenge/"
+  status = 301
+
+[[redirects]]
+  from = "/join-expert-network/"
+  to = "/network/"
+  status = 301
+
+[[redirects]]
+  from = "/insights/what-is-a-hazop-study/"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/insights/hazid-vs-hazop/"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/insights/feed-to-operations-project-lifecycle/"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/insights/operational-readiness-checklist/"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/insights/plant-start-up-checks/"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/insights/rcm-vs-preventive-maintenance/"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/insights/technical-due-diligence-checklist/"
+  to = "/insights/"
+  status = 301
 
 [[headers]]
   for = "/*"
